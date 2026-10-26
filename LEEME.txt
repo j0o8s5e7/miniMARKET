@@ -1,0 +1,27 @@
+MINIMARKET ALTES - Como ejecutarlo
+1. Descomprime TODA la carpeta (los archivos deben quedar juntos).
+2. Necesitas Python 3 (python.org). No requiere librerias extra.
+3. Abre una terminal en la carpeta y ejecuta:   python app.py
+   (en Windows tambien: doble clic en iniciar.bat)
+4. Se abre el navegador solo. Si no, abre la direccion que dice la terminal
+   (normalmente http://localhost:8000). NO abras index.html con doble clic.
+5. Si ya tenias otra copia abierta, cierrala con Ctrl+C antes de abrir esta.
+
+Base de datos: minimarket_altes.db (se crea desde minimarket_altes_sqlite.sql si no existe).
+Todo lo que agregues o edites se guarda ahi. "Descargar codigo SQL" exporta la base actual.
+Datos del negocio (RUC, direccion): editar la linea NEGOCIO al inicio de app.py.
+Para empezar de cero: borra minimarket_altes.db y vuelve a ejecutar.
+
+Consola SQL: pestaña 'Consola SQL' para consultar con codigo SQL (solo lectura, Ctrl+Enter para ejecutar, exporta a CSV).
+
+Productos > boton 'Ver': Iconos grandes/medianos/pequenos, Lista o Detalles (se recuerda tu eleccion). Desde las tarjetas puedes Editar o Desactivar productos.
+
+Empleados: pestaña para registrar empleados, asignar rol (administrador, cajero, almacenero) y contrato de 3 a 12 meses.
+Los 5 empleados originales aparecen 'Sin registrar' hasta que les asignes su contrato (boton Editar).
+
+ACCESO Y PERMISOS POR ROL
+Al abrir el sistema se pide usuario y contraseña. Contraseña inicial de TODOS: altes2026  (cambiarla con el boton "Contraseña")
+  radmin   (administrador)  -> todas las secciones
+  mflores, jquispe  (cajero)     -> Dashboard, Nueva venta, Clientes, Comprobantes
+  phuaman, eramos   (almacenero) -> Dashboard, Productos, Ingreso de mercaderia, Proveedores
+El administrador crea los usuarios en Empleados (usuario + contrasena + rol). Si olvidas una contrasena, el administrador la restablece editando al empleado.
